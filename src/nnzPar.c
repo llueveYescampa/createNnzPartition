@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     for (int row=0; row<global_n; ++row) {    
         if ( (float) rows[row+1] >=  lookingFor ) { 
             // search for smallest difference
-            if (fabs ( lookingFor - rows[row+1])  <= fabs ( lookingFor - rows[row])   ) {
+            if ( ( rows[row+1] - lookingFor)  <=  lookingFor - rows[row]   ) {
                 endRow = row;
             } else {
                 endRow = row-1;
