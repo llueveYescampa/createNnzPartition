@@ -40,13 +40,13 @@ int main(int argc, char *argv[])
     rows[global_n]=global_nnz;
     
         
-    float nnzIncre = (float ) global_nnz/ (float) worldSize;
-    float lookingFor=nnzIncre;
+    double nnzIncre = (double) global_nnz/ (double) worldSize;
+    double lookingFor=nnzIncre;
     int startRow=0, endRow;
     int partition=0;    
 
     for (int row=0; row<global_n; ++row) {    
-        if ( (float) rows[row+1] >=  lookingFor ) { 
+        if ( (double) rows[row+1] >=  lookingFor ) { 
             // search for smallest difference
             if ( ( rows[row+1] - lookingFor)  <=  lookingFor - rows[row]   ) {
                 endRow = row;
