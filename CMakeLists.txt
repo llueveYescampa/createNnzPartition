@@ -31,3 +31,6 @@ include_directories("src/include")
 set (nnzPar "src/nnzPar.c")
 add_executable(nnzPar ${nnzPar})
 
+set (rowPar "src/rowPar.c")
+add_executable(rowPar ${rowPar})
+
